@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border: solid 1px green;
+    border: solid px green;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
 }
 
 .container {
-    max-width: 500px;
+    
     margin: 0px auto;
 }
 
@@ -43,6 +43,7 @@ body {
 .explore-block, .resturant_section {
     background-color: rgb(243, 243, 243);
     padding-bottom: 20px;
+    
 }
 
 .explore-block h1 {
@@ -52,8 +53,8 @@ body {
 
 .explore-block h3 {
     text-align: center;
-    margin: 0px 80px;
-    font-weight: 400;
+    margin: 0px 60px;
+    font-weight: 300;
 }
 
 .explore-block button {
@@ -117,7 +118,13 @@ body {
     font-size: 14;
 }
 
-.resturant_section .card{
+.resturant_section{
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.resturant_section_card{
     width: 90%;
     height: 260px;
     margin: 10px auto;
@@ -125,56 +132,65 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    
+
 } 
 
-.resturant_section .card img{
+.resturant_section_card img{
     width: 100%;
     height: 72%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
+    margin:0;
    
 } 
 
 
-.card-info{
+.resturant_section_card-info{
     display: flex;
     flex-direction: row;
-   justify-content: space-between;
-   height: auto;
-    
+    justify-content: space-between;
+    height: 28%;
+   
+
 }
 
-.card-text {
+.resturant_section_card-text {
     margin-left: 20px;  
- 
+
 }
 
-.card-text h4{
-    margin-top: 15px;
+.resturant_section_card-text h4{
+    margin-top: 13px;
     margin-bottom: 0px;
+    font-weight: 700;
 }
-.card-text h5{
+.resturant_section_card-text h5{
     margin-top: 5px;
     margin-bottom: 0px;
     font-weight: 400;
     font-size: 16px;
 }
 
-.heart-icon{
-    padding: 20px;
-    background-color: #9356DC;
-    border-bottom-right-radius: 20px;
-}
 
+
+.heart-icon{
+    padding: 25px 20px;
+    border-bottom-right-radius: 10px;
+    font-size: 24px;
+}
 
 footer {
     color: white;
     background-color: rgb(75, 72, 72);
+    padding-bottom: 50px;
 }
 ol{
-    margin-bottom: 10px;
+    margin-bottom: -8px;
+}
+ol a{
+    text-decoration: none;
+    color: white;
 }
 
 .footer-title{
@@ -182,3 +198,10 @@ ol{
     font-weight: 300;
     margin-bottom: 15px;
 }
+
+.footer-icon{
+    font-size: smaller;
+    margin-right: 3px;
+}
+
+.fork{ margin-right: 7px;}
