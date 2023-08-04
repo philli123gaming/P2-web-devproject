@@ -5,4 +5,6 @@ Fonts
 Logo and Titles: Shrikhand
 Text: Roboto
 
-YOURE GONNA HAVE TO MAKE A NEW PROECT PUBLISH IT TO GITHUB AND THEN REDO ALL CHANGES MADE IN THIS DOCUMENT TO THAT ONE
+loading spinner on the first homepage probably a gradient of both colours
+
+need heart animation on the homepage cards

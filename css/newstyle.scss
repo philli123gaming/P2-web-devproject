@@ -1,22 +1,32 @@
+$primary : #9356DC;
+$secondary : #FF79DA;
+$tertiary : #99E2D0;
+$grey_color: rgb(173, 173, 173);
+
+$text-font-family: 'Roboto', sans-serif;
+$title-font-family: 'Shrikhand', cursive;
+
+
+
+
 * {
     box-sizing: border-box;
     border: solid px green;
 }
 
 header {
-    font-family: 'Shrikhand', cursive;
+    font-family: $title-font-family;
     text-align: center;
     margin: 0px auto;
-    box-shadow: 1px 1px 2px rgb(173, 173, 173);
+    box-shadow: 1px 1px 2px $grey_color;
 }
 
 .container {
-    
     margin: 0px auto;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $text-font-family
 }
 
 .location-block {
@@ -40,10 +50,11 @@ body {
     margin-left: -20px;
 }
 
-.explore-block, .resturant_section {
+.explore-block,
+.resturant_section {
     background-color: rgb(243, 243, 243);
     padding-bottom: 20px;
-    
+
 }
 
 .explore-block h1 {
@@ -64,7 +75,7 @@ body {
     margin: 20px auto 20px auto;
     padding: 15px 0px;
     border-radius: 30px;
-    background-color: #9356DC;
+    background-color: $primary;
     border: none;
     text-decoration: none;
     box-shadow: 1px 1px 4px black;
@@ -73,7 +84,8 @@ body {
 
 }
 
-.howitworks_section h2, .resturant_section h2 {
+.howitworks_section h2,
+.resturant_section h2 {
     margin-left: 20px;
     margin-top: 40px;
 }
@@ -99,35 +111,39 @@ body {
     gap: 30px;
     margin-left: -10px;
 }
-.card-icon{
+
+.card-icon {
     margin-top: 20px;
     font-size: 22px;
     color: grey;
 }
+
 .fa-stack {
     vertical-align: top;
     display: inline;
     font-size: 13px;
     margin-top: 16px;
-  }
+}
 
-.fa-1,.fa-2,.fa-3{
+.fa-1,
+.fa-2,
+.fa-3 {
     color: white;
     font-size: smaller;
 }
 
 .card-icon-circle {
-    color: #9356DC;
+    color: $primary;
     font-size: 14;
 }
 
-.resturant_section{
+.resturant_section {
     background-color: rgb(243, 243, 243);
     padding-bottom: 50px;
     padding-top: 10px;
 }
 
-.resturant_section_card{
+.resturant_section_card {
     width: 90%;
     height: 260px;
     margin: 10px auto;
@@ -135,42 +151,43 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-text-decoration: none;
-color: black;
+    text-decoration: none;
+    color: black;
 
-} 
+}
 
-.resturant_section_card img{
+.resturant_section_card img {
     width: 100%;
     height: 72%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
-    margin:0;
-   
-} 
+    margin: 0;
+
+}
 
 
-.resturant_section_card-info{
+.resturant_section_card-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 28%;
-   
+
 
 }
 
 .resturant_section_card-text {
-    margin-left: 20px;  
+    margin-left: 20px;
 
 }
 
-.resturant_section_card-text h4{
+.resturant_section_card-text h4 {
     margin-top: 13px;
     margin-bottom: 0px;
     font-weight: 700;
 }
-.resturant_section_card-text h5{
+
+.resturant_section_card-text h5 {
     margin-top: 5px;
     margin-bottom: 0px;
     font-weight: 400;
@@ -179,7 +196,7 @@ color: black;
 
 
 
-.heart-icon{
+.heart-icon {
     padding: 25px 20px;
     border-bottom-right-radius: 10px;
     font-size: 24px;
@@ -190,23 +207,27 @@ footer {
     background-color: rgb(75, 72, 72);
     padding-bottom: 50px;
 }
-ol{
+
+ol {
     margin-bottom: -8px;
-}
-ol a{
-    text-decoration: none;
-    color: white;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
-.footer-title{
+.footer-title {
     font-family: "Shrikhand", cursive;
     font-weight: 300;
     margin-bottom: 15px;
 }
 
-.footer-icon{
+.footer-icon {
     font-size: smaller;
     margin-right: 3px;
 }
 
-.fork{ margin-right: 7px;}
+.fork {
+    margin-right: 7px;
+}
