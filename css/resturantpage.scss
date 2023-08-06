@@ -1,0 +1,21 @@
+@import "variables/colors";
+@import "variables/fonts";
+
+@mixin grey_section {
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 20px;
+}
+
+.resturant-img{
+    width: 100%;
+
+
+}
+
+.menu-section{
+    background-color: grey;
+    height: 200px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}

@@ -1,0 +1,304 @@
+@import "variables/colors";
+@import "variables/fonts";
+
+@mixin grey_section {
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    border: solid 0px green;
+}
+
+
+header {
+    display: block;
+    height: auto;
+    text-align: center;
+    padding: 20px 0px 30px;
+    box-shadow: 1px 1px 2px $grey_color;
+}
+
+.logo{
+     margin: 0px auto;
+}
+
+.container {
+    margin: 0px auto;
+    background-color: white;
+}
+
+body {
+    font-family: $text-font-family
+}
+
+.location-block {
+    background-color: rgb(233, 233, 233);
+    margin: -21px auto;
+    text-align: center;
+    display: block;
+    padding: 15px 0px;
+
+    * {
+        display: inline;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+}
+
+.map_icon {
+    margin-right: 10px;
+    margin-left: -20px;
+}
+
+.explore-block,
+.resturant_section {
+    @include grey_section();
+
+}
+
+.explore-block {
+    h1 {
+        text-align: center;
+        padding: 26px;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 0px 60px;
+        font-weight: 300;
+    }
+
+   
+}
+ .button {
+        display: block;
+        text-align: center;
+        width: 230px;
+        margin: 20px auto 20px auto;
+        padding: 16px 0px;
+        border-radius: 30px;
+        background-image: linear-gradient($secondary, $primary);
+
+        border: none;
+        text-decoration: none;
+        box-shadow: 1px 1px 4px black;
+        color: white;
+    }
+
+    
+.howitworks_section h2,
+.resturant_section h2 {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.card_area {
+    display: block;
+    margin-bottom: 50px;
+
+    .card {
+        background-color: rgb(240, 240, 240);
+        height: 70px;
+        padding-top: 5px;
+        width: calc(100% - 50px);
+        margin: 20px 20px 20px 30px;
+        box-shadow: -3px 4px 8px 1px rgb(211, 211, 211);
+        border-radius: 25px;
+
+        .instructions {
+            display: flex;
+            gap: 30px;
+            margin-left: -15px;
+            height: 100%;
+          
+        }
+    }
+
+}
+
+
+.card:hover {
+    background-color: $on-hover;
+
+    .instructions .card-icon {
+        color: $primary;
+    }
+}
+
+.card-icon {
+    margin-top: 20px;
+    font-size: 22px;
+    color: grey;
+}
+
+
+
+.fa-stack {
+    vertical-align: top;
+    display: inline;
+
+}
+
+.instruct-stack {
+    font-size: 13px;
+    margin-top: 16px;
+}
+
+.fa-1,
+.fa-2,
+.fa-3 {
+    color: white;
+    font-size: smaller;
+}
+
+.card-icon-circle {
+    color: $primary;
+    font-size: 14;
+}
+
+
+#resturant_section_title{
+    font-weight: 800;
+}
+
+.resturant_section {
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.resturant_section_card {
+    width: calc(100% - 40px);
+    height: 300px;
+    margin: 20px 20px 20px 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+
+.img-container {
+    height: 72%;
+    width: 100%;
+    position: relative;
+
+
+    .New {
+        position: absolute;
+        color: green;
+        background-color: rgb(140, 236, 191);
+        padding: 8px 30px;
+        top: -4%;
+        right: 4%;
+       
+
+    }
+
+    img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+.resturant_section_card-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 28%;
+}
+
+.resturant_section_card-text {
+    margin-left: 20px;
+
+    h4 {
+        margin-top: 18px;
+        margin-bottom: 0px;
+        font-weight: 700;
+        font-size: larger;
+    }
+
+    h5 {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-weight: 300;
+        font-size: 20px;
+    }
+}
+
+.heart-stack {
+    height: 100%;
+    padding: 25px 35px;
+}
+
+.heart-icon {
+    height: 100%;
+    margin-top: -25px;
+    padding-top: 35%;
+
+    border-bottom-right-radius: 10px;
+    font-size: 24px;
+
+}
+
+.filled-heart-icon {
+    opacity: 0;
+    background: -webkit-linear-gradient($primary, $secondary);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.heart-stack:hover {
+    .filled-heart-icon {
+        opacity: 1;
+    }
+}
+
+
+
+footer {
+    color: white;
+    background-color: rgb(75, 72, 72);
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+    margin-top: 15px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.footer-title {
+    font-family: "Shrikhand", cursive;
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: larger;
+}
+
+.footer-icon {
+    font-size: smaller;
+    margin-right: 3px;
+}
+
+.fork {
+    margin-right: 7px;
+}

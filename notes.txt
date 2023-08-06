@@ -7,4 +7,4 @@ Text: Roboto
 
 loading spinner on the first homepage probably a gradient of both colours
 
-need heart animation on the homepage cards
+figure out how to layer stuff

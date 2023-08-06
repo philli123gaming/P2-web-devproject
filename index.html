@@ -10,36 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- connecting to google to source fonts -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--linking in fontawesome icons -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
         rel="stylesheet">
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" >
-    <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
 
 
     <link rel="stylesheet" href="css/default.css" type="text/css" />
 </head>
+
+
 <div class="container">
     <header>
-        <h1>ohmyfood</h1> <!--- add the actual logo --->
+       <img class="logo" src="images\logo\ohmyfood@2x.svg" alt=""> <!--- add the actual logo --->
     </header>
     <main>
         <div class="location-block">
@@ -61,7 +52,7 @@
                 <div class="card_area">
                     <div class="card">
                         <div class="instructions">
-                            <span class="fa-stack">
+                            <span class="fa-stack instruct-stack">
                                 <i class="fa-solid fa-circle  card-icon-circle fa-stack-2x"></i>
                                 <i class="fa-solid fa-1 fa-stack-1x"></i>
                             </span>
@@ -73,11 +64,11 @@
                     </div>
                     <div class="card">
                         <div class="instructions">
-                            <span class="fa-stack">
+                            <span class="fa-stack instruct-stack">
                                 <i class="fa-solid fa-circle  card-icon-circle fa-stack-2x"></i>
                                 <i class="fa-solid fa-2 fa-stack-1x"></i>
                             </span>
-                            <i class="fa-solid fa-mobile-screen-button card-icon"></i>
+                            <i class="fa-solid fa-list  card-icon"></i>
                             <span>
                                 <h4>Create your menu</h4>
                             </span>
@@ -85,11 +76,11 @@
                     </div>
                     <div class="card">
                         <div class="instructions">
-                            <span class="fa-stack">
+                            <span class="fa-stack instruct-stack">
                                 <i class="fa-solid fa-circle  card-icon-circle fa-stack-2x"></i>
                                 <i class="fa-solid fa-3 fa-stack-1x"></i>
                             </span>
-                            <i class="fa-solid fa-mobile-screen-button card-icon"></i>
+                            <i class="fa-solid fa-store card-icon"></i>
                             <span>
                                 <h4>Go enjoy it at the resturant</h4>
                             </span>
@@ -98,43 +89,103 @@
                 </div>
             </div>
             <div class="resturant_section">
-                <h2 id="resturant_section">Resturants</h2>
+                <h2 id="resturant_section_title">Resturants</h2>
                 <a href="#" class="resturant_section_card">
-                    <img src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                    <div class="img-container">
+                        <img src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        <h5 class="New">New</h5>
+                    </div>
+
                     <div class="resturant_section_card-info">
                         <div class="resturant_section_card-text">
                             <h4>The Full Palette</h4>
                             <h5>New York</h5>
                         </div>
-                        <div><i class="fa-regular fa-heart heart-icon"></i></div>
+                        <span class="fa-stack heart-stack">
+                            <i class="fa-regular fa-heart heart-icon fa-stack-1x"></i>
+                            <i class="fa fa-heart heart-icon filled-heart-icon fa-stack-1x" aria-hidden="true"></i>
+                        </span>
+                        
+                    </div>
+                </a>
+
+                <a href="#" class="resturant_section_card">
+                    <div class="img-container">
+                        <img src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                        <h5 class="New">New</h5>
+                    </div>
+
+                    <div class="resturant_section_card-info">
+                        <div class="resturant_section_card-text">
+                            <h4>The Encahnted Plate</h4>
+                            <h5>New York</h5>
+                        </div>
+                        <span class="fa-stack heart-stack">
+                            <i class="fa-regular fa-heart heart-icon fa-stack-1x"></i>
+                            <i class="fa fa-heart heart-icon filled-heart-icon fa-stack-1x" aria-hidden="true"></i>
+                        </span>
+                        
+                    </div>
+                </a>
+
+                <a href="#" class="resturant_section_card">
+                    <div class="img-container">
+                        <img src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                        <h5 class="New">New</h5>
+                    </div>
+
+                    <div class="resturant_section_card-info">
+                        <div class="resturant_section_card-text">
+                            <h4>Bastille</h4>
+                            <h5>New York</h5>
+                        </div>
+                        <span class="fa-stack heart-stack">
+                            <i class="fa-regular fa-heart heart-icon fa-stack-1x"></i>
+                            <i class="fa fa-heart heart-icon filled-heart-icon fa-stack-1x" aria-hidden="true"></i>
+                        </span>
+                        
+                    </div>
+                </a>
+
+                <a href="#" class="resturant_section_card">
+                    <div class="img-container">
+                        <img src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                        <h5 class="New">New</h5>
+                    </div>
+
+                    <div class="resturant_section_card-info">
+                        <div class="resturant_section_card-text">
+                            <h4>Le Gourmand</h4>
+                            <h5>New York</h5>
+                        </div>
+                        <span class="fa-stack heart-stack">
+                            <i class="fa-regular fa-heart heart-icon fa-stack-1x"></i>
+                            <i class="fa fa-heart heart-icon filled-heart-icon fa-stack-1x" aria-hidden="true"></i>
+                        </span>
+                        
                     </div>
                 </a>
             </div>
 
-
-
-
+            
         </body>
     </main>
+
     <footer>
+        <ul>
+            <li class="footer-title">ohmyfood</li>
+            <li><a href="#">
+                    <i class="fa-solid fa-utensils footer-icon fork"></i>
+                    Suggest a resturant</a>
 
-        <li>
-            <ol class="footer-title">ohmyfood</ol>
-            <ol><a href="#">
-                <i class="fa-solid fa-utensils footer-icon fork"></i>
-                Suggest a resturant</a>
-                
-            </ol>
-            <ol><a href="#">
-                <i class="fa-solid fa-handshake-angle footer-icon"></i>
-                 Become a partner</a>
-                
-            </ol>
-            <ol><a href="#">Legal</a></ol>
-            <ol><a href="#">Contact</a></ol>
-        </li>
-
-     
+            </li>
+            <li><a href="#">
+                    <i class="fa-solid fa-handshake-angle footer-icon"></i>
+                    Become a partner</a>
+            </li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
 
     </footer>
 </div>
