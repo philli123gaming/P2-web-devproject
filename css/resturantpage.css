@@ -1,10 +1,100 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header a .logo {
+  margin-right: 50%;
+}
+
+.home-arrow {
+  color: black;
+}
+
 .resturant-img {
   width: 100%;
 }
 
 .menu-section {
-  background-color: grey;
-  height: 200px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  background-color: rgb(241, 241, 241);
+  height: 800px;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
+
+hr {
+  border: #99E2D0 2px solid;
+  margin-left: 20px;
+  margin-top: -20px;
+  width: 10%;
+}
+
+.menu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu-title h1 {
+  font-family: "Shrikhand", cursive;
+  margin-left: 20px;
+  margin: 50px;
+  font-size: 42px;
+}
+
+.title-icon {
+  border: 1px solid green;
+  padding-bottom: 40px;
+  height: 20px;
+  margin-right: 40px;
+  font-size: xx-large;
+  margin-top: 55px;
+}
+
+.menu-subtitle {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.card-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menu-card {
+  background-color: white;
+  width: calc(100% - 40px);
+  margin: 10px 20px 0px 20px;
+  border-radius: 20px;
+  height: 100px;
+}
+.menu-card h3 {
+  font-size: 24px;
+  margin-left: 18px;
+  margin-top: 20px;
+}
+
+.menu-card-subtext {
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -20px;
+  border: 1px solid green;
+}
+.menu-card-subtext * {
+  border: 1px solid green;
+  display: inline;
+}
+
+.add-info {
+  margin-top: 5px;
+  font-size: 22px;
+  margin-left: 18px;
+  font-weight: 300;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
 }/*# sourceMappingURL=resturantpage.css.map */
