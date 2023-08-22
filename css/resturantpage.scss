@@ -9,32 +9,34 @@
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
-    a{
-        .logo {
-        margin-right: 50%;
-    }
+    position: relative;
 }
-    
+
+.logo {
+    position: absolute;
+    left: 35%;
 }
 
 .home-arrow {
     color: black;
+    position: absolute;
+    top: 50%;
+    margin-left: 40px;
 }
 
 .resturant-img {
     width: 100%;
 
+
 }
 
-
-
 .menu-section {
+    position: relative;
     background-color: rgb(241, 241, 241);
     height: 800px;
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
+    margin-top: -70px;
 
 }
 
@@ -52,14 +54,16 @@ hr {
 
     h1 {
         font-family: $title-font-family;
-        margin-left: 20px;
+
         margin: 50px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        margin-left: 25px;
         font-size: 42px;
     }
 }
 
 .title-icon {
-    border: 1px solid green;
     padding-bottom: 40px;
     height: 20px;
     margin-right: 40px;
@@ -81,46 +85,91 @@ hr {
 
 .menu-card {
     background-color: white;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: calc(100% - 40px);
     margin: 10px 20px 0px 20px;
     border-radius: 20px;
     height: 100px;
 
     h3 {
-        font-size: 24px;
+        font-size: 26px;
         margin-left: 18px;
         margin-top: 20px;
     }
 }
 
+.menu-card-text {
+    width: 100%;
+}
+
+.confirm_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+
+    overflow: hidden;
+    transition: visibility 0.3s, opacity 0.3s, background-color 0.7s, width 0.7s ease-in-out;
+}
+
+.fa-check {
+    color: #99E2D0;
+    font-size: 22px;
+
+}
+
+.white-circle {
+    color: white;
+}
+
 .menu-card-subtext {
-    display: block;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: -20px;
-    border: 1px solid green;
+    margin-top: -15px;
 
-    *{
-        border: 1px solid green;
-        display: inline;
+} 
+.price {
+        font-size: 24px;
+        font-weight: 700;
+        margin-right: 30px;
+        padding: 0 20px;
+
     }
 
- 
-   
-}
+ .add-info {
+        font-size: 22px;
+        font-weight: 400;
+        margin-left: 18px;
+        position: relative;
 
-.add-info {
-    margin-top: 5px;
-    font-size: 22px;
-    margin-left: 18px;
-    font-weight: 300;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: ellipsis;
+        width: auto;
+        transition: width 0.7s;
 
-}
+    }
 
-.price {
-    font-size: 24px;
-    font-weight: 700;
-    
- 
+.menu-card:hover {
+    .confirm_button {
+        opacity: 1;
+        visibility: visible;
+        width: 20%;
+        background-color: #99E2D0;
+    }
+
+    .menu-card-subtext {
+        .add-info {
+           overflow: hidden;
+            width: 350px;
+        }
+    }
 }

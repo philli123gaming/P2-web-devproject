@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: solid 0px green;
+  border: solid 1px green;
 }
 
 header {
@@ -26,7 +26,7 @@ body {
 
 .location-block {
   background-color: rgb(233, 233, 233);
-  margin: -21px auto;
+  margin: -20px auto;
   text-align: center;
   display: block;
   padding: 15px 0px;
