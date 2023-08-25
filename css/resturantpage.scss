@@ -6,34 +6,39 @@
     padding-bottom: 20px;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
+* {
+    box-sizing: border-box;
+    border: solid 1px green;
     position: relative;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+   
+}
+
 .logo {
-    position: absolute;
-    left: 35%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width:max-content;
+    flex-grow: 1;
 }
 
 .home-arrow {
     color: black;
-    position: absolute;
-    top: 50%;
-    margin-left: 40px;
 }
 
 .resturant-img {
     width: 100%;
-
-
+    
+    position: relative;
 }
 
 .menu-section {
-    position: relative;
+   
     background-color: rgb(241, 241, 241);
-    height: 800px;
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
     margin-top: -70px;
@@ -54,7 +59,6 @@ hr {
 
     h1 {
         font-family: $title-font-family;
-
         margin: 50px;
         margin-top: 60px;
         margin-bottom: 20px;
@@ -92,6 +96,7 @@ hr {
     margin: 10px 20px 0px 20px;
     border-radius: 20px;
     height: 100px;
+    box-shadow:  1px 2px black;
 
     h3 {
         font-size: 26px;
@@ -104,20 +109,7 @@ hr {
     width: 100%;
 }
 
-.confirm_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: white;
-    width: 0%;
-    opacity: 0;
-    visibility: hidden;
 
-    overflow: hidden;
-    transition: visibility 0.3s, opacity 0.3s, background-color 0.7s, width 0.7s ease-in-out;
-}
 
 .fa-check {
     color: #99E2D0;
@@ -135,41 +127,59 @@ hr {
     justify-content: space-between;
     margin-top: -15px;
 
-} 
+}
+
 .price {
-        font-size: 24px;
-        font-weight: 700;
-        margin-right: 30px;
-        padding: 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+    
+    padding: 0 20px;
 
-    }
+}
 
- .add-info {
-        font-size: 22px;
-        font-weight: 400;
-        margin-left: 18px;
-        position: relative;
+.add-info {
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 18px;
+    position: relative;
 
-        white-space: nowrap;
-        overflow: visible;
-        text-overflow: ellipsis;
-        width: auto;
-        transition: width 0.7s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: fit-content;
+    flex-grow: 1;
+    transition: width 0.7s;
 
-    }
+}
+
+.confirm_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    width: 0%;
+    
+    
+
+    overflow: hidden;
+    transition: visibility 0.3s, opacity 0.3s, background-color 0.7s, width 0.7s ease-in-out;
+}
 
 .menu-card:hover {
     .confirm_button {
-        opacity: 1;
         visibility: visible;
-        width: 20%;
+        opacity: 1;
         background-color: #99E2D0;
+        width: 20%;
     }
 
     .menu-card-subtext {
         .add-info {
-           overflow: hidden;
-            width: 350px;
+            width: 300px;
         }
     }
 }
