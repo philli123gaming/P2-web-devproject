@@ -1,23 +1,28 @@
 * {
   box-sizing: border-box;
-  border: solid 1px green;
+  border: solid 0px green;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: white;
+  max-width: 768px;
 }
 
 header {
-  display: block;
-  height: auto;
-  text-align: center;
-  padding: 20px 0px 30px;
-  box-shadow: 1px 1px 2px rgb(173, 173, 173);
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px 0px 20px;
 }
 
 .logo {
   margin: 0px auto;
-}
-
-.container {
-  margin: 0px auto;
-  background-color: white;
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
 
 body {
@@ -63,7 +68,7 @@ body {
   display: block;
   text-align: center;
   width: 230px;
-  margin: 80px auto 80px auto;
+  margin: 40px auto 40px auto;
   padding: 16px 0px;
   border-radius: 30px;
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -131,7 +136,7 @@ body {
 
 .card-icon-circle {
   color: #9356DC;
-  font-size: 14;
+  font-size: 26px;
 }
 
 #resturant_section_title {
@@ -217,7 +222,7 @@ body {
 
 .filled-heart-icon {
   opacity: 0;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -233,6 +238,11 @@ footer {
   background-color: rgb(75, 72, 72);
   padding-bottom: 30px;
   padding-top: 20px;
+}
+
+ul {
+  margin-left: 15px;
+  padding-left: 20px;
 }
 
 li {
@@ -259,4 +269,83 @@ li a {
 
 .fork {
   margin-right: 7px;
+}
+
+.loader {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  margin-left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  border-radius: 100%;
+  display: inline-block;
+  animation: slide 1s infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0.1s;
+  background: #FF79DA;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+  background: #99E2D0;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+  background: #9356DC;
+}
+
+.dot:nth-child(4) {
+  animation-delay: 0.4s;
+  background: #FF79DA;
+}
+
+.dot:nth-child(5) {
+  animation-delay: 0.5s;
+  background: #99E2D0;
+}
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.wrapper {
+  position: relative;
+}
+
+.wrapper-loader {
+  animation: hideAnimation 0s ease-in 3s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1;
+  color: red;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+.side-panel {
+  background-color: aqua;
 }/*# sourceMappingURL=default.css.map */

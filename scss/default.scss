@@ -8,25 +8,30 @@
 
 * {
     box-sizing: border-box;
-    border: solid 1px green;
-}
+    border: solid 0px green;
 
-
-header {
-    display: block;
-    height: auto;
-    text-align: center;
-    padding: 20px 0px 30px;
-    box-shadow: 1px 1px 2px $grey_color;
-}
-
-.logo{
-     margin: 0px auto;
 }
 
 .container {
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: white;
+    max-width: 768px;
+}
+
+header {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px 0px 20px;
+}
+
+.logo {
+    margin: 0px auto;
+    height: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
 
 body {
@@ -72,25 +77,24 @@ body {
         margin: 0px 60px;
         font-weight: 300;
     }
-
-   
 }
- .button {
-        display: block;
-        text-align: center;
-        width: 230px;
-        margin: 80px auto 80px auto;
-        padding: 16px 0px;
-        border-radius: 30px;
-        background-image: linear-gradient($secondary, $primary);
 
-        border: none;
-        text-decoration: none;
-        box-shadow: 1px 1px 4px black;
-        color: white;
-    }
+.button {
+    display: block;
+    text-align: center;
+    width: 230px;
+    margin: 40px auto 40px auto;
+    padding: 16px 0px;
+    border-radius: 30px;
+    background-image: linear-gradient($secondary, $primary);
 
-    
+    border: none;
+    text-decoration: none;
+    box-shadow: 1px 1px 4px black;
+    color: white;
+}
+
+
 .howitworks_section h2,
 .resturant_section h2 {
     margin-left: 20px;
@@ -115,7 +119,7 @@ body {
             gap: 30px;
             margin-left: -15px;
             height: 100%;
-          
+
         }
     }
 
@@ -158,11 +162,11 @@ body {
 
 .card-icon-circle {
     color: $primary;
-    font-size: 14;
+    font-size: 26px;
 }
 
 
-#resturant_section_title{
+#resturant_section_title {
     font-weight: 800;
 }
 
@@ -252,7 +256,7 @@ body {
 
 .filled-heart-icon {
     opacity: 0;
-    background: -webkit-linear-gradient($primary, $secondary);
+    background: linear-gradient($primary, $secondary);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: opacity 0.5s ease-in-out;
@@ -274,6 +278,11 @@ footer {
     padding-top: 20px;
 }
 
+ul {
+    margin-left: 15px;
+    padding-left: 20px;
+}
+
 li {
     list-style-type: none;
     color: white;
@@ -290,6 +299,7 @@ li {
     font-weight: 300;
     margin-bottom: 15px;
     font-size: larger;
+
 }
 
 .footer-icon {
@@ -299,4 +309,134 @@ li {
 
 .fork {
     margin-right: 7px;
+}
+
+
+.loader {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    margin-left: 10%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.dot {
+    width: 24px;
+    height: 24px;
+    background: $primary;
+    border-radius: 100%;
+    display: inline-block;
+    animation: slide 1s infinite;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0.1s;
+    background: $secondary;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+    background: $tertiary;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.3s;
+    background: $primary;
+}
+
+.dot:nth-child(4) {
+    animation-delay: 0.4s;
+    background: $secondary;
+}
+
+.dot:nth-child(5) {
+    animation-delay: 0.5s;
+    background: $tertiary;
+}
+
+@-moz-keyframes slide {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes slide {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper-loader {
+    animation: hideAnimation 0s ease-in 3s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1;
+    color: red;
+}
+
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+.side-panel{
+    background-color: aqua;
 }

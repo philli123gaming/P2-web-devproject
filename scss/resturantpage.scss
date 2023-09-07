@@ -6,38 +6,33 @@
     padding-bottom: 20px;
 }
 
-* {
-    box-sizing: border-box;
-    border: solid 1px green;
-    position: relative;
-}
 
-header {
-    display: flex;
-    flex-direction: row;
-   
-}
 
-.logo {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    width:max-content;
-    flex-grow: 1;
-}
 
 .home-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 20px;
 }
+
+
 
 .resturant-img {
     width: 100%;
-    
-    position: relative;
+  
 }
 
 .menu-section {
-   
+position: relative;
     background-color: rgb(241, 241, 241);
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
@@ -96,12 +91,25 @@ hr {
     margin: 10px 20px 0px 20px;
     border-radius: 20px;
     height: 100px;
-    box-shadow:  1px 2px black;
+    box-shadow: 1px 2px black;
+    position: relative;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .7s ease-in-out;
+    animation: moveslightlyup 0.8s ease-out;
+    
 
     h3 {
         font-size: 26px;
         margin-left: 18px;
         margin-top: 20px;
+
+        white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    transition: all .7s ease-in-out;
     }
 }
 
@@ -109,30 +117,16 @@ hr {
     width: 100%;
 }
 
-
-
-.fa-check {
-    color: #99E2D0;
-    font-size: 22px;
-
-}
-
-.white-circle {
-    color: white;
-}
-
 .menu-card-subtext {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: -15px;
-
 }
 
 .price {
     font-size: 24px;
     font-weight: 700;
-    
     padding: 0 20px;
 
 }
@@ -146,9 +140,9 @@ hr {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: fit-content;
+ 
     flex-grow: 1;
-    transition: width 0.7s;
+    transition: all 0.7s ease-in-out;
 
 }
 
@@ -156,30 +150,64 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    
     visibility: hidden;
     opacity: 0;
     background-color: white;
-    width: 0%;
     
-    
-
-    overflow: hidden;
-    transition: visibility 0.3s, opacity 0.3s, background-color 0.7s, width 0.7s ease-in-out;
+    width: 20%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: -150px;
+    transition: all 0.7s ease-in-out;
 }
 
 .menu-card:hover {
+    padding-right: 150px;
+
+
     .confirm_button {
+        right: 0;
         visibility: visible;
         opacity: 1;
         background-color: #99E2D0;
-        width: 20%;
     }
 
     .menu-card-subtext {
         .add-info {
             width: 300px;
+            
         }
     }
+}
+
+.fa-check {
+    color: #99E2D0;
+    font-size: 22px;
+
+}
+
+.white-circle {
+    color: white;
+}
+
+.confirm-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes moveslightlyup {
+    0%{
+        opacity: 0%;
+        transform: translateY(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }   
 }
