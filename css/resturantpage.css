@@ -237,7 +237,7 @@ hr {
   }
   .menu-card:hover .fa-check {
     transform: rotate(360deg);
-    transition: all 0.8;
+    transition: all 0.8s;
   }
 }
 @media screen and (max-width: 768px) {
@@ -255,6 +255,6 @@ hr {
   }
   .menu-card:active .fa-check {
     transform: rotate(360deg);
-    transition: all 0.8;
+    transition: all 0.8s;
   }
 }/*# sourceMappingURL=resturantpage.css.map */
