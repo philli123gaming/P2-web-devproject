@@ -6,7 +6,6 @@
 .container {
   margin: 0 auto;
   background-color: white;
-  max-width: 768px;
 }
 
 header {
@@ -53,11 +52,12 @@ body {
 .resturant_section {
   background-color: rgb(243, 243, 243);
   padding-bottom: 20px;
+  margin-top: -1px;
 }
 
 .explore-block h1 {
   text-align: center;
-  padding: 26px;
+  padding: 40px;
 }
 .explore-block h3 {
   text-align: center;
@@ -69,7 +69,7 @@ body {
   display: block;
   text-align: center;
   width: 230px;
-  margin: 40px auto 40px auto;
+  margin: 30px auto 40px auto;
   padding: 16px 0px;
   border-radius: 30px;
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -89,7 +89,8 @@ body {
   display: block;
   margin-bottom: 50px;
 }
-.card_area .card {
+
+.card {
   background-color: rgb(240, 240, 240);
   height: 70px;
   padding-top: 5px;
@@ -98,18 +99,11 @@ body {
   box-shadow: -3px 4px 8px 1px rgb(211, 211, 211);
   border-radius: 25px;
 }
-.card_area .card .instructions {
+.card .instructions {
   display: flex;
   gap: 30px;
   margin-left: -15px;
   height: 100%;
-}
-
-.card:hover {
-  background-color: #ede1fc;
-}
-.card:hover .instructions .card-icon {
-  color: #9356DC;
 }
 
 .card-icon {
@@ -150,6 +144,11 @@ body {
   padding-top: 10px;
 }
 
+.resturant_section_card_area {
+  display: flex;
+  flex-direction: column;
+}
+
 .resturant_section_card {
   width: calc(100% - 40px);
   height: 300px;
@@ -160,6 +159,7 @@ body {
   flex-direction: column;
   text-decoration: none;
   color: black;
+  box-shadow: 1px 1px 4px rgb(146, 146, 146);
 }
 
 .img-container {
@@ -227,11 +227,7 @@ body {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.heart-stack:hover .filled-heart-icon {
-  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 footer {
@@ -330,7 +326,7 @@ li a {
 }
 
 .wrapper-loader {
-  animation: hideAnimation 0s ease-in 3s;
+  animation: hideAnimation 0s ease-in 0s;
   animation-fill-mode: forwards;
   position: absolute;
   width: 100%;
@@ -349,4 +345,72 @@ li a {
 }
 .side-panel {
   background-color: aqua;
+  border: solid 1px green;
+  width: 20%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .card {
+    width: 50%;
+  }
+  .card:nth-child(2) {
+    margin-left: 25%;
+  }
+  .card:nth-child(3) {
+    margin-left: 45%;
+  }
+  .resturant_section_card {
+    width: calc(50% - 40px);
+  }
+  .resturant_section_card_area {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 993px) {
+  .container {
+    max-width: 993px;
+  }
+  .card:hover {
+    background-color: #ede1fc;
+  }
+  .card:hover .instructions .card-icon {
+    color: #9356DC;
+  }
+  .heart-stack:hover .filled-heart-icon {
+    opacity: 1;
+  }
+  .resturant_section_card {
+    width: calc(50% - 40px);
+  }
+  .resturant_section_card_area {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .button:hover {
+    box-shadow: 3px 3px 3px black;
+  }
+  .resturant_section_card:hover {
+    box-shadow: 2px 2px 8px black;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card:active {
+    background-color: #ede1fc;
+  }
+  .card:active .instructions .card-icon {
+    color: #9356DC;
+  }
+  .heart-stack:active .filled-heart-icon {
+    opacity: 1;
+  }
+  .button:active {
+    box-shadow: 3px 3px 3px black;
+  }
+  .resturant_section_card:active {
+    box-shadow: 2px 2px 8px black;
+  }
 }/*# sourceMappingURL=default.css.map */

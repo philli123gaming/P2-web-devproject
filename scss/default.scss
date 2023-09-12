@@ -1,21 +1,23 @@
 @import "variables/colors";
 @import "variables/fonts";
+@import "variables/breakpoints";
+
 
 @mixin grey_section {
     background-color: rgb(243, 243, 243);
     padding-bottom: 20px;
+    margin-top: -1px;
 }
 
 * {
     box-sizing: border-box;
     border: solid 0px green;
-
 }
 
 .container {
     margin: 0 auto;
     background-color: white;
-    max-width: 768px;
+
 }
 
 header {
@@ -70,7 +72,8 @@ body {
 .explore-block {
     h1 {
         text-align: center;
-        padding: 26px;
+        padding: 40px;
+        
     }
 
     h3 {
@@ -84,7 +87,7 @@ body {
     display: block;
     text-align: center;
     width: 230px;
-    margin: 40px auto 40px auto;
+    margin: 30px auto 40px auto ;
     padding: 16px 0px;
     border-radius: 30px;
     background-image: linear-gradient($secondary, $primary);
@@ -106,7 +109,9 @@ body {
     display: block;
     margin-bottom: 50px;
 
-    .card {
+}
+
+ .card {
         background-color: rgb(240, 240, 240);
         height: 70px;
         padding-top: 5px;
@@ -124,16 +129,6 @@ body {
         }
     }
 
-}
-
-
-.card:hover {
-    background-color: $on-hover;
-
-    .instructions .card-icon {
-        color: $primary;
-    }
-}
 
 .card-icon {
     margin-top: 20px;
@@ -177,6 +172,11 @@ body {
     padding-top: 10px;
 }
 
+.resturant_section_card_area{
+display: flex;
+flex-direction: column;
+}
+
 .resturant_section_card {
     width: calc(100% - 40px);
     height: 300px;
@@ -186,8 +186,10 @@ body {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: black;
+    color: black;box-shadow: 1px 1px 4px rgb(146, 146, 146);
 }
+
+
 
 .img-container {
     height: 72%;
@@ -260,15 +262,11 @@ body {
     background: linear-gradient($primary, $secondary);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 
-.heart-stack:hover {
-    .filled-heart-icon {
-        opacity: 1;
-    }
-}
+
 
 
 
@@ -420,7 +418,7 @@ li {
 }
 
 .wrapper-loader {
-    animation: hideAnimation 0s ease-in 3s;
+    animation: hideAnimation 0s ease-in 0s;
     animation-fill-mode: forwards;
     position: absolute;
     width: 100%;
@@ -438,6 +436,96 @@ li {
     }
 }
 
-.side-panel{
+.side-panel {
     background-color: aqua;
+    border: solid 1px green;
+    width: 20%;
+
+}
+
+@media screen and (min-width: $mobile-b) and (max-width: $desktop-b) {
+   .container{
+    width: 100%;
+   }
+    .card {
+        width: 50%;
+    }
+
+    .card:nth-child(2){
+        margin-left: 25%;
+    }
+    .card:nth-child(3){
+        margin-left: 45%;
+    } 
+    .resturant_section_card{
+        width: calc(50% - 40px);
+    }
+    .resturant_section_card_area{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+   
+}
+
+@media screen and (min-width: 993px){
+    .container{max-width: 993px;}
+
+    .card:hover {
+        background-color: $on-hover;
+    
+        .instructions .card-icon {
+            color: $primary;
+        }
+    }
+
+    .heart-stack:hover {
+        .filled-heart-icon {
+            opacity: 1;
+        }
+    }
+
+    .resturant_section_card{
+        width: calc(50% - 40px);
+    }
+
+    .resturant_section_card_area{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .button:hover{
+        box-shadow: 3px 3px 3px black;
+    }
+
+    .resturant_section_card:hover{
+        box-shadow: 2px 2px 8px black;
+    }
+}
+
+   
+
+
+@media screen and (max-width: $desktop-b){
+    
+    .card:active {
+        background-color: $on-hover;
+    
+        .instructions .card-icon {
+            color: $primary;
+        }
+    }
+
+    .heart-stack:active {
+        .filled-heart-icon {
+            opacity: 1;
+        }
+    } 
+    .button:active{
+        box-shadow: 3px 3px 3px black;
+    }
+
+    .resturant_section_card:active{
+        box-shadow: 2px 2px 8px black;
+    }
 }

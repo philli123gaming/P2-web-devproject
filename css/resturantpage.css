@@ -1,3 +1,8 @@
+.logo {
+  margin-top: 10px;
+  padding-bottom: 0%;
+}
+
 .home-arrow {
   position: absolute;
   top: 0;
@@ -36,6 +41,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border: solid green 1px;
 }
 .menu-title h1 {
   font-family: "Shrikhand", cursive;
@@ -45,6 +51,10 @@ hr {
   margin-left: 25px;
   font-size: 42px;
 }
+.menu-title span {
+  margin-right: 25px;
+  margin-top: 60px;
+}
 
 .title-icon {
   padding-bottom: 40px;
@@ -52,6 +62,18 @@ hr {
   margin-right: 40px;
   font-size: xx-large;
   margin-top: 55px;
+}
+
+.heart-stack {
+  padding: 0;
+}
+.heart-stack i {
+  font-size: xx-large;
+}
+
+.heart-icon {
+  margin: 0;
+  height: auto;
 }
 
 .menu-subtitle {
@@ -65,6 +87,15 @@ hr {
   flex-direction: column;
   justify-content: space-evenly;
 }
+.card-area .menu-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.card-area .menu-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.card-area .menu-card:nth-child(4) {
+  animation-delay: 0.9s;
+}
 
 .menu-card {
   background-color: white;
@@ -77,11 +108,13 @@ hr {
   height: 100px;
   box-shadow: 1px 2px black;
   position: relative;
+  opacity: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.7s ease-in-out;
-  animation: moveslightlyup 0.8s ease-out;
+  animation: moveslightlyup 1s ease-out;
+  animation-fill-mode: forwards;
 }
 .menu-card h3 {
   font-size: 26px;
@@ -132,6 +165,7 @@ hr {
   opacity: 0;
   background-color: white;
   width: 20%;
+  max-width: 150px;
   position: absolute;
   height: 100%;
   top: 0;
@@ -139,22 +173,10 @@ hr {
   transition: all 0.7s ease-in-out;
 }
 
-.menu-card:hover {
-  padding-right: 150px;
-}
-.menu-card:hover .confirm_button {
-  right: 0;
-  visibility: visible;
-  opacity: 1;
-  background-color: #99E2D0;
-}
-.menu-card:hover .menu-card-subtext .add-info {
-  width: 300px;
-}
-
 .fa-check {
   color: #99E2D0;
   font-size: 22px;
+  transition: none;
 }
 
 .white-circle {
@@ -169,11 +191,76 @@ hr {
 
 @keyframes moveslightlyup {
   0% {
-    opacity: 0%;
+    opacity: 0;
     transform: translateY(20%);
   }
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .indicator {
+    color: yellow;
+  }
+}
+@media screen and (max-width: 992px) {
+  .menu-card:active {
+    padding-right: 150px;
+  }
+  .menu-card:active .confirm_button {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    background-color: #99E2D0;
+  }
+  .menu-card:active .menu-card-subtext .add-info {
+    width: 300px;
+  }
+  .menu-card:active .fa-check {
+    rotate: 360deg;
+    transition: all 0.7s;
+  }
+}
+@media screen and (min-width: 993px) {
+  .indicator {
+    color: green;
+  }
+  .menu-card:hover {
+    padding-right: 150px;
+  }
+  .menu-card:hover .confirm_button {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    background-color: #99E2D0;
+  }
+  .menu-card:hover .menu-card-subtext .add-info {
+    width: 300px;
+  }
+  .menu-card:hover .fa-check {
+    rotate: 360deg;
+    transition: all 0.7s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .indicator {
+    color: red;
+  }
+  .menu-card:active {
+    padding-right: 18%;
+  }
+  .menu-card:active .confirm_button {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    background-color: #99E2D0;
+  }
+  .menu-card:active .menu-card-subtext .add-info {
+    width: 300px;
+  }
+  .menu-card:active .fa-check {
+    rotate: 360deg;
+    transition: all 0.7s;
   }
 }/*# sourceMappingURL=resturantpage.css.map */

@@ -1,12 +1,16 @@
 @import "variables/colors";
 @import "variables/fonts";
+@import "variables/breakpoints";
 
 @mixin grey_section {
     background-color: rgb(243, 243, 243);
     padding-bottom: 20px;
 }
 
-
+.logo{
+    margin-top: 10px;
+    padding-bottom: 0%;
+}
 
 
 .home-arrow {
@@ -52,6 +56,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: solid green 1px;
 
     h1 {
         font-family: $title-font-family;
@@ -60,6 +65,11 @@ hr {
         margin-bottom: 20px;
         margin-left: 25px;
         font-size: 42px;
+    }
+
+    span{
+        margin-right: 25px;
+        margin-top: 60px;
     }
 }
 
@@ -71,6 +81,21 @@ hr {
     margin-top: 55px;
 }
 
+.heart-stack{
+    padding: 0;
+
+    i{
+        font-size: xx-large;
+    }
+   
+}
+
+.heart-icon{
+    margin:0;
+    height: auto;
+}
+
+
 .menu-subtitle {
     margin-left: 20px;
     font-size: 24px;
@@ -81,6 +106,17 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+   
+    .menu-card:nth-child(2){
+        animation-delay: 0.3s;
+    }
+    .menu-card:nth-child(3){
+        animation-delay: 0.6s;
+    }
+    .menu-card:nth-child(4){
+        animation-delay: 0.9s;
+    }
 }
 
 .menu-card {
@@ -94,12 +130,14 @@ hr {
     height: 100px;
     box-shadow: 1px 2px black;
     position: relative;
+    opacity: 0;
 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     transition: all .7s ease-in-out;
-    animation: moveslightlyup 0.8s ease-out;
+    animation: moveslightlyup 1s ease-out;
+    animation-fill-mode: forwards;
     
 
     h3 {
@@ -160,6 +198,7 @@ hr {
     background-color: white;
     
     width: 20%;
+    max-width: 150px;
     position: absolute;
     height: 100%;
     top: 0;
@@ -167,28 +206,12 @@ hr {
     transition: all 0.7s ease-in-out;
 }
 
-.menu-card:hover {
-    padding-right: 150px;
 
-
-    .confirm_button {
-        right: 0;
-        visibility: visible;
-        opacity: 1;
-        background-color: #99E2D0;
-    }
-
-    .menu-card-subtext {
-        .add-info {
-            width: 300px;
-            
-        }
-    }
-}
 
 .fa-check {
     color: #99E2D0;
     font-size: 22px;
+    transition: none;
 
 }
 
@@ -204,7 +227,7 @@ hr {
 
 @keyframes moveslightlyup {
     0%{
-        opacity: 0%;
+        opacity: 0;
         transform: translateY(20%);
     }
     100%{
@@ -212,3 +235,83 @@ hr {
         transform: translateY(0%);
     }   
 }
+
+@media screen and (min-width: $mobile-b) and (max-width: $desktop-b) {
+    .indicator{color: yellow;}
+}
+@media screen and (max-width: $desktop-b){
+    .menu-card:active {
+        padding-right: 150px;
+    
+    
+        .confirm_button {
+            right: 0;
+            visibility: visible;
+            opacity: 1;
+            background-color: #99E2D0;
+        }
+    
+        .menu-card-subtext {
+            .add-info {
+                width: 300px;
+                
+            }
+        }
+
+        .fa-check{
+            rotate: 360deg;
+            transition: all 0.7s;
+        }
+    }
+
+}
+@media screen and (min-width: 993px){
+.indicator{color: green;}
+
+    .menu-card:hover {
+        padding-right: 150px;
+    
+    
+        .confirm_button {
+            right: 0;
+            visibility: visible;
+            opacity: 1;
+            background-color: #99E2D0;
+        }
+    
+        .menu-card-subtext {
+            .add-info {
+                width: 300px;
+            }
+        }
+ 
+        .fa-check{
+            rotate: 360deg;
+            transition: all 0.7s;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-b){
+.indicator{color: red;}
+.menu-card:active {
+    padding-right: 18%;
+    
+    .confirm_button {
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        background-color: #99E2D0;
+    }
+
+    .menu-card-subtext {
+        .add-info {
+            width: 300px;
+        }
+    }
+    
+    .fa-check{
+        rotate: 360deg;
+        transition: all 0.7s;
+    }
+}}
