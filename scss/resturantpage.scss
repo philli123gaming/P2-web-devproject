@@ -7,6 +7,10 @@
     padding-bottom: 20px;
 }
 
+header{
+    padding: 20px 0px 20px;
+}
+
 .logo{
     margin-top: 10px;
     padding-bottom: 0%;
@@ -32,6 +36,8 @@
 
 .resturant-img {
     width: 100%;
+    max-height: 400px;
+    object-fit: cover;
   
 }
 
@@ -62,7 +68,7 @@ hr {
         font-family: $title-font-family;
         margin: 60px 0px 0px 25px;
     
-        font-size: 42px;
+        font-size: 41px;
     }
 
     span{
@@ -89,6 +95,7 @@ hr {
 }
 
 .heart-icon{
+    padding-top: 5px;
     margin:0;
     height: auto;
 }
@@ -235,9 +242,7 @@ hr {
     }   
 }
 
-@media screen and (min-width: $mobile-b) and (max-width: $desktop-b) {
-    .indicator{color: yellow;}
-}
+
 @media screen and (max-width: $desktop-b){
     .menu-card:active {
         padding-right: 150px;
@@ -258,14 +263,14 @@ hr {
         }
 
         .fa-check{
-            rotate: 360deg;
-            transition: all 0.7s;
+            transform: rotate(360deg);
+            transition: all 0.9s;
         }
     }
 
 }
 @media screen and (min-width: 993px){
-.indicator{color: green;}
+
 
     .menu-card:hover {
         padding-right: 150px;
@@ -285,14 +290,14 @@ hr {
         }
  
         .fa-check{
-            rotate: 360deg;
-            transition: all 0.7s;
+            transform: rotate(360deg);
+            transition: all 0.8;
         }
     }
 }
 
 @media screen and (max-width: $mobile-b){
-.indicator{color: red;}
+
 .menu-card:active {
     padding-right: 18%;
     
@@ -310,7 +315,7 @@ hr {
     }
     
     .fa-check{
-        rotate: 360deg;
-        transition: all 0.7s;
+        transform: rotate(360deg);
+        transition: all 0.8;
     }
 }}
