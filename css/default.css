@@ -328,7 +328,7 @@ li a {
 }
 
 .wrapper-loader {
-  animation: hideAnimation 0s ease-in 0s;
+  animation: hideAnimation 2s ease-in;
   animation-fill-mode: forwards;
   position: absolute;
   width: 100%;
@@ -341,16 +341,8 @@ li a {
 @keyframes hideAnimation {
   to {
     visibility: hidden;
-    width: 0;
-    height: 0;
   }
 }
-.side-panel {
-  background-color: aqua;
-  border: solid 1px green;
-  width: 20%;
-}
-
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .container {
     width: 100%;
@@ -415,4 +407,4 @@ li a {
   .resturant_section_card:active {
     box-shadow: 1px 1px 1px 4px rgb(192, 192, 192);
   }
-}/*# sourceMappingURL=default.css.map */
+}
